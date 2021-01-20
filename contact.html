@@ -8,6 +8,7 @@
     <!--CSS Styles-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link id="theme" rel="stylesheet" type="text/css" href="css/green.css">
+    
 
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -19,7 +20,11 @@
     <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.css">
     <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
     <!--JS Files-->
     <script type="text/javascript" src="js/main.js"></script>
 </head>
@@ -55,17 +60,65 @@
             <div id="box">
                 <!--Cargar Formulario-->
                 <h2>contacto</h2>
-                <form action="" method="POST" id="form_contact">
+                
+                <form class="needs-validation" novalidate>
+                    <div class="mb-1">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control form-control-sm" id="name" minlength="2" required>
+                        <div  class="valid-feedback">Está Ok!</div>
+                        <div class="invalid-feedback">Complete el campo Correctamente</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="surname" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control form-control-sm" id="surname" minlength="2" required>
+                        <div class="valid-feedback">Está Ok!</div>
+                        <div class="invalid-feedback">Completa el campo Correctamente</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control form-control-sm" id="email" required>
+                        <div class="valid-feedback">Está Ok!</div>
+                        <div class="invalid-feedback">Completa el campo Correctamente</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="sex" class="form-label">State</label>
+                        <select class="form-select form-select-sm" id="sex" required>
+                            <option selected disabled value="">Escoge tú genero...</option>
+                            <option value="men">Hombre</option>
+                            <option value="woman">Mujer</option>
+                        </select>
+                        <div class="invalid-feedback">
+                           Por favor selecciona tú genero..
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="date" class="form-label">Fecha Nacimiento</label>
+                        <input type="date" class="form-control form-control-sm" id="date_form" required>
+                        <div class="valid-feedback">Está Ok!</div>
+                        <div class="invalid-feedback">Seleccion una Fecha</div>
+                    </div>
+                    <div class="mb-1">
+                        <label for="years" class="form-label">Edad</label>
+                        <input type="number" class="form-control form-control-sm" id="years" required>
+                        <div class="valid-feedback">Está Ok!</div>
+                        <div class="invalid-feedback">Completa el campo Correctamente</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                </form>
+                <!--
+                <form action="" method="POST"  id="form_contact" class="needs-validation" novalidate>
                     
-                        <!-- <legend>Please provide your name, email address (won't be published) and a comment</legend> -->
                         <label for="name">Nombre</label>
-                        <input type="text" name="name"/>
-                        
+                        <input type="text" name="name" required/>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
                         <label for="surname">Apellidos</label>
-                        <input type="text" minlength="2" name="surname" />
+                        <input type="text"  name="surname" />
 
                         <label for="email">Email</label>
-                        <input type="email" name="email" required/>
+                        <input type="email" name="email" />
 
                         <label for="sex">Sexo</label>
                         <select name="sex">
@@ -74,13 +127,14 @@
                         </select>
 
                         <label for="date">Fecha Nacimiento</label>
-                        <input type="text" name="date" required/>
+                        <input type="text" name="date" />
 
                         <label for="years">Edad</label>
-                        <input type="number" name="years" required>
+                        <input type="number" name="years" >
                         <input type="submit" value="Enviar"/>
                    
                 </form>
+                -->
             </div>
             <aside id="sidebar">
                 <div id="about">

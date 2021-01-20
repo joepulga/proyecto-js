@@ -199,9 +199,9 @@ footer{
 }  
 
 #box{
-    width: 60%;
+    width: 50%;
     float: left;
-    margin-top: 40px;
+    margin-top: 10px;
     
 }
 
@@ -242,4 +242,8 @@ select{
      border:1px solid#cccccc;
      margin-bottom: 10px;
      margin-top: 5px;
+}
+
+#date_form, #sex {
+    width: 80%;
 }
