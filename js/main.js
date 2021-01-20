@@ -1,42 +1,45 @@
 $(document).ready(()=>{
     // Slider
-    $('.galeria').bxSlider({
-        mode: 'fade',
-        captions: false,
-        slideWidth: 1200,
-        responsive:true 
-    });
+    if(window.location.href.indexOf('index')> -1){
+        $('.galeria').bxSlider({
+            mode: 'fade',
+            captions: false,
+            slideWidth: 1200,
+            responsive: true
+        });
+    }
+    
 
     //Posts
-    let posts = [
-        {
-            title: 'Prueba de titulo 1',
-            date: 'Publicado el dia ' + moment().day() +  ' de ' +moment().format("MMMM") + " del "+ moment().format('YYYY'),
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis, culpa ? Saepe illo repellendus veniam quaerat officiisinventore exercitationem eligendi deserunt quidem et, velit tempore consectetur amet nobis qui ?Animi, placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit.Porro incidunt delenitinulla corporis, harum nemo cupiditate, pariatur numquam in quod qui corrupti esse ea nesciunt animiperferendis impedit assumenda.Enim!'
-        },
-        {
-            title: 'Prueba de titulo 2',
-            date: 'Publicado el dia ' + moment().day() + ' de ' + moment().format("MMMM") + " del " + moment().format('YYYY'),
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis, culpa ? Saepe illo repellendus veniam quaerat officiisinventore exercitationem eligendi deserunt quidem et, velit tempore consectetur amet nobis qui ?Animi, placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit.Porro incidunt delenitinulla corporis, harum nemo cupiditate, pariatur numquam in quod qui corrupti esse ea nesciunt animiperferendis impedit assumenda.Enim!'
-        },
-        {
-            title: 'Prueba de titulo 3',
-            date: 'Publicado el dia ' + moment().day() + ' de ' + moment().format("MMMM") + " del " + moment().format('YYYY'),
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis, culpa ? Saepe illo repellendus veniam quaerat officiisinventore exercitationem eligendi deserunt quidem et, velit tempore consectetur amet nobis qui ?Animi, placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit.Porro incidunt delenitinulla corporis, harum nemo cupiditate, pariatur numquam in quod qui corrupti esse ea nesciunt animiperferendis impedit assumenda.Enim!'
-        },
-        {
-            title: 'Prueba de titulo 4',
-            date: 'Publicado el dia ' + moment().day() + ' de ' + moment().format("MMMM") + " del " + moment().format('YYYY'),
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis, culpa ? Saepe illo repellendus veniam quaerat officiisinventore exercitationem eligendi deserunt quidem et, velit tempore consectetur amet nobis qui ?Animi, placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit.Porro incidunt delenitinulla corporis, harum nemo cupiditate, pariatur numquam in quod qui corrupti esse ea nesciunt animiperferendis impedit assumenda.Enim!'
-        },
-        {
-            title: 'Prueba de titulo 5',
-            date: 'Publicado el dia ' + moment().day() + ' de ' + moment().format("MMMM") + " del " + moment().format('YYYY'),
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis, culpa ? Saepe illo repellendus veniam quaerat officiisinventore exercitationem eligendi deserunt quidem et, velit tempore consectetur amet nobis qui ?Animi, placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit.Porro incidunt delenitinulla corporis, harum nemo cupiditate, pariatur numquam in quod qui corrupti esse ea nesciunt animiperferendis impedit assumenda.Enim!'
-        },
-    ];
-    posts.forEach((item,index) =>{
-        let post = `
+    if (window.location.href.indexOf('index') > -1) {
+            let posts = [{
+                    title: 'Prueba de titulo 1',
+                    date: 'Publicado el dia ' + moment().day() + ' de ' + moment().format("MMMM") + " del " + moment().format('YYYY'),
+                    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis, culpa ? Saepe illo repellendus veniam quaerat officiisinventore exercitationem eligendi deserunt quidem et, velit tempore consectetur amet nobis qui ?Animi, placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit.Porro incidunt delenitinulla corporis, harum nemo cupiditate, pariatur numquam in quod qui corrupti esse ea nesciunt animiperferendis impedit assumenda.Enim!'
+                },
+                {
+                    title: 'Prueba de titulo 2',
+                    date: 'Publicado el dia ' + moment().day() + ' de ' + moment().format("MMMM") + " del " + moment().format('YYYY'),
+                    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis, culpa ? Saepe illo repellendus veniam quaerat officiisinventore exercitationem eligendi deserunt quidem et, velit tempore consectetur amet nobis qui ?Animi, placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit.Porro incidunt delenitinulla corporis, harum nemo cupiditate, pariatur numquam in quod qui corrupti esse ea nesciunt animiperferendis impedit assumenda.Enim!'
+                },
+                {
+                    title: 'Prueba de titulo 3',
+                    date: 'Publicado el dia ' + moment().day() + ' de ' + moment().format("MMMM") + " del " + moment().format('YYYY'),
+                    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis, culpa ? Saepe illo repellendus veniam quaerat officiisinventore exercitationem eligendi deserunt quidem et, velit tempore consectetur amet nobis qui ?Animi, placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit.Porro incidunt delenitinulla corporis, harum nemo cupiditate, pariatur numquam in quod qui corrupti esse ea nesciunt animiperferendis impedit assumenda.Enim!'
+                },
+                {
+                    title: 'Prueba de titulo 4',
+                    date: 'Publicado el dia ' + moment().day() + ' de ' + moment().format("MMMM") + " del " + moment().format('YYYY'),
+                    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis, culpa ? Saepe illo repellendus veniam quaerat officiisinventore exercitationem eligendi deserunt quidem et, velit tempore consectetur amet nobis qui ?Animi, placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit.Porro incidunt delenitinulla corporis, harum nemo cupiditate, pariatur numquam in quod qui corrupti esse ea nesciunt animiperferendis impedit assumenda.Enim!'
+                },
+                {
+                    title: 'Prueba de titulo 5',
+                    date: 'Publicado el dia ' + moment().day() + ' de ' + moment().format("MMMM") + " del " + moment().format('YYYY'),
+                    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Debitis, culpa ? Saepe illo repellendus veniam quaerat officiisinventore exercitationem eligendi deserunt quidem et, velit tempore consectetur amet nobis qui ?Animi, placeat!Lorem ipsum dolor sit amet consectetur adipisicing elit.Porro incidunt delenitinulla corporis, harum nemo cupiditate, pariatur numquam in quod qui corrupti esse ea nesciunt animiperferendis impedit assumenda.Enim!'
+                },
+            ];
+            posts.forEach((item, index) => {
+                let post = `
                 <article class="post">
                     <h2>${item.title}</h2>
                     <span class="date">${item.date}</span>
@@ -46,8 +49,10 @@ $(document).ready(()=>{
                     <a href="#" class="button-more">Leer más</a>
                 </article>
                 `;
-        $("#posts").append(post);
-    });
+                $("#posts").append(post);
+            });
+    }
+
 
     // selector de tema
     let theme = $("#theme");
@@ -95,5 +100,54 @@ $(document).ready(()=>{
             location.reload();
         });
     }
-    
+    //Acordeon
+    if (window.location.href.indexOf('about') > -1) {
+        $("#acordeon").accordion();
+    }
+    //Reloj
+    if (window.location.href.indexOf('reloj') > -1) {
+        setInterval(function(){
+            let reloj = moment().format('h:mm:ss a');
+            $('#reloj').html(reloj);
+        },1000);
+        
+    };
+    //Form validate Contact
+    if(window.location.href.indexOf('contact' > -1)){
+        $("form input[name='date']").datepicker({
+            dateFormat: 'dd-mm-yy'
+        });
+         $("#form_contact").validate({
+             rules: {
+                 name: {
+                     required: true,
+                     minlength: 2
+                 },
+                 surname: {
+                     required: true,
+                     minlength: 2
+                 },
+                 email: {
+                     required: true,
+                     email: true
+                 }
+             },
+             messages: {
+                 name: {
+                     required: "Por favor especifica tú nombre.",
+                     minlength: jQuery.validator.format("al menos {2} carácteres requeridos!")
+                 },
+                 surname: {
+                     required: "Por favor especifica tú Apellido.",
+                     minlength: jQuery.validator.format("al menos {2} carácteres requeridos!")
+                 },
+                 email: {
+                     required: "Especifica tu email.",
+                     email: "tu direccion de email debe tener el formato apropiado name@domain.com"
+                 }
+             },
+             focusCleanup: true
+         });
+    }
+   
 });

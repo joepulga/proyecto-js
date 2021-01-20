@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +11,15 @@
 
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
- 
-    <!--Slider jquery plugin-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
     <!--MomentJs-->
-        <script type="text/javascript" src="js/moment-with-locales.js"></script>
-        <script type="text/javascript" src="js/moment.js"></script>
-        
+    <script type="text/javascript" src="js/moment-with-locales.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+
     <!--JS Files-->
     <script type="text/javascript" src="js/main.js"></script>
 </head>
+
 <body>
     <div id="selected-theme">
         <div id="to-green"></div>
@@ -32,13 +30,13 @@
         <!--HeadBoard-->
         <header>
             <div id="logo">
-               <h1> JS Proyect </h1>
+                <h1> JS Proyect </h1>
             </div>
             <div class="clearfix">
-                
+
             </div>
             <nav id="menu">
-                <ul >
+                <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="reloj.html">Watch</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -46,23 +44,21 @@
                 </ul>
             </nav>
         </header>
-        <!-- Slider-->
-        <div id="slider">
-            <div class="galeria">
-                <div><img src="img/hojas.jpg" title="Hojas"></div>
-                <div><img src="img/rojo.jpg" title="Rojo"></div>
-                <div><img src="img/cielo.jpg" title="Cielo"></div>
-            </div>
-        </div>
+
+
         <!--Content-->
         <section id="content">
-            <div id="posts">
-                <!--Cargar posts desde json-->
+            <div id="box">
+                <!--Cargar Reloj-->
+                <div id="reloj">
+
+
+                </div>
             </div>
             <aside id="sidebar">
                 <div id="about">
                     <h4><span>¿Quien soy?</span></h4>
-                    <img src="img/caracol.jpg"/>
+                    <img src="img/caracol.jpg" />
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div id="login">
@@ -82,7 +78,7 @@
                         <input type="password" name="password">
                         <input type="submit" value="Entrar">
                     </form>
-                </div>  
+                </div>
             </aside>
             <div class="clearfix"></div>
         </section>
@@ -92,4 +88,5 @@
         <a href="#" class="up"> Ir arriba</a>
     </footer>
 </body>
+
 </html>
